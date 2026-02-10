@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2024-2025 Friedrich von Never <friedrich@fornever.me>
+SPDX-FileCopyrightText: 2024-2026 Friedrich von Never <friedrich@fornever.me>
 
 SPDX-License-Identifier: MIT
 -->
@@ -18,17 +18,7 @@ Main Features
 
 Deployment
 ----------
-1. Clone the repository or just copy the repository files.
-2. Fill the package description in `FVNeverDotNetTemplate/FVNeverDotNetTemplate.csproj`.
-3. Drop the file `FVNeverDotNetTemplate/Class1.cs` (it is present to bootstrap the documentation checker).
-4. Replace the `FVNeverDotNetTemplateOwner` in the project sources with the repository owner's name on GitHub.
-5. Replace the `FVNeverDotNetTemplate` with the project name
-   - in the file and folder names,
-   - in the sources.
-6. Enable GitHub Pages publishing on the page `https://github.com/<owner>/<repository>/settings/pages`, choose **GitHub Actions**.
-7. Update the project summary in `README.md` and `docs/index.md`.
-8. Enable [Renovate][renovate] for your repository.
-9. Delete this file (`/.github/README.md`).
+Run the script `scripts/Initiate.ps1`, it will do all the work. 
 
 License
 -------

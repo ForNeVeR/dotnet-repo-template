@@ -1,12 +1,12 @@
 <!--
-SPDX-FileCopyrightText: 2024-2025 Friedrich von Never <friedrich@fornever.me>
+SPDX-FileCopyrightText: 2024-2026 Friedrich von Never <friedrich@fornever.me>
 
 SPDX-License-Identifier: MIT
 -->
 
 FVNeverDotNetTemplate [![Status Zero][status-zero]][andivionian-status-classifier] [![FVNeverDotNetTemplate on nuget.org][nuget.badge]][nuget]
 ========
-FVNeverDotNetTemplate is a fresh project deployed from a repository template.
+FVNeverDotNetTemplateDescription
 
 Documentation
 -------------
