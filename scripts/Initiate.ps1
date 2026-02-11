@@ -44,7 +44,7 @@ function ReplaceStringInFile($path, $from, $to) {
 
 function ReplaceString($from, $to) {
     foreach ($path in git ls-files) {
-        if (Test-Path "$RepoRoot/$path") {
+        if ((Test-Path "$RepoRoot/$path") -and ($path -notin $script:filesToRemove)) {
             ReplaceStringInFile $path $from $to
         }
     }
@@ -54,7 +54,7 @@ $filesToRename = @{}
 function ReplaceFileNames($from, $to) {
     $root = (Resolve-Path $RepoRoot).Path
     foreach ($path in git ls-files) {
-        if (Test-Path "$RepoRoot/$path") {
+        if ((Test-Path "$RepoRoot/$path") -and ($path -notin $script:filesToRemove)) {
             if ($path.Contains($from)) {
                 $targetPath = $path.Replace($from, $to)
                 if ($WhatIf) {
