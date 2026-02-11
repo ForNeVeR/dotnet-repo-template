@@ -21,6 +21,7 @@
     <File Path="LICENSES\MIT.txt" />
   </Folder>
   <Folder Name="/scripts/">
+    <File Path="scripts/Initiate.ps1" />
     <File Path="scripts\Get-Version.ps1" />
     <File Path="scripts\github-actions.fsx" />
   </Folder>
@@ -40,5 +41,5 @@
     <File Path="global.json" />
     <File Path="global.json.license" />
   </Folder>
-  <Project Path="FVNeverDotNetTemplate\FVNeverDotNetTemplate.csproj" Type="Classic C#" />
+  <Project Path="FVNeverDotNetTemplate\FVNeverDotNetTemplate.csproj" />
 </Solution>
