@@ -27,7 +27,7 @@ function RemoveFile($file) {
 
 $filesToReplace = @{}
 function ReplaceStringInFile($path, $from, $to) {
-    if ($filesToReplace[$path]) {
+    if ($filesToReplace.ContainsKey($path)) {
         $filesToReplace[$path] = $filesToReplace[$path].Replace($from, $to)
     } else {
         $currentContent = Get-Content -Raw "$RepoRoot/$path"
