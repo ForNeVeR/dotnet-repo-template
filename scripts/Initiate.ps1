@@ -88,7 +88,7 @@ function ReportStatus() {
                 $tempFile = [IO.Path]::GetTempFileName()
                 try {
                     [IO.File]::WriteAllText($tempFile, $file.Value)
-                    git -C $RepoRoot diff --no-index "$RepoRoot/$($file.Name)" $tempFile
+                    git diff --no-index "$RepoRoot/$($file.Name)" $tempFile
                 } finally {
                     Remove-Item $tempFile
                 }
