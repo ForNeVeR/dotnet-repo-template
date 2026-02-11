@@ -18,7 +18,7 @@ Main Features
 
 Deployment
 ----------
-Run the script `scripts/Initiate.ps1`, it will do all the work. 
+Run the script `scripts/Initiate.ps1`, it will do all the work.
 
 License
 -------
