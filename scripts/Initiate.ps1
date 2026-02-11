@@ -43,7 +43,7 @@ function ReplaceStringInFile($path, $from, $to) {
 }
 
 function ReplaceString($from, $to) {
-    foreach ($path in git ls-files) {
+    foreach ($path in git -C $RepoRoot ls-files) {
         if (Test-Path "$RepoRoot/$path") {
             ReplaceStringInFile $path $from $to
         }
@@ -53,7 +53,7 @@ function ReplaceString($from, $to) {
 $filesToRename = @{}
 function ReplaceFileNames($from, $to) {
     $root = (Resolve-Path $RepoRoot).Path
-    foreach ($path in git ls-files) {
+    foreach ($path in git -C $RepoRoot ls-files) {
         if (Test-Path "$RepoRoot/$path") {
             if ($path.Contains($from)) {
                 $targetPath = $path.Replace($from, $to)
@@ -88,7 +88,7 @@ function ReportStatus() {
                 $tempFile = [IO.Path]::GetTempFileName()
                 try {
                     [IO.File]::WriteAllText($tempFile, $file.Value)
-                    git diff --no-index "$RepoRoot/$($file.Name)" $tempFile
+                    git -C $RepoRoot diff --no-index "$RepoRoot/$($file.Name)" $tempFile
                 } finally {
                     Remove-Item $tempFile
                 }
