@@ -126,6 +126,22 @@ let workflows = [
                 run = "Install-Module VerifyEncoding -Repository PSGallery -RequiredVersion 2.2.1 -Force && Test-Encoding"
             )
         ]
+
+        job "todos" [
+            runsOn "ubuntu-24.04"
+            step(
+                name = "Check out the sources",
+                usesSpec = Auto "actions/checkout"
+            )
+            step(
+                name = "Check TODOs",
+                uses = "ForNeVeR/Todosaurus/action@v1",
+                options = Map.ofList [
+                    "github-token", "${{ secrets.GITHUB_TOKEN }}"
+                    "strict", "true"
+                ]
+            )
+        ]
     ]
 
     workflow "release" [
