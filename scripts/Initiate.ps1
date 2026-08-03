@@ -108,9 +108,12 @@ RemoveFile 'FVNeverDotNetTemplate/Class1.cs'
 RemoveFile '.github/README.md'
 RemoveFile 'scripts/Initiate.ps1'
 
+# NOTE: prefix-overlapping placeholders must stay ordered longest/most-specific first,
+# otherwise the base 'FVNeverDotNetTemplate' token clobbers the more specific tokens.
+ReplaceString 'FVNeverDotNetTemplateDescription' $description
 ReplaceString 'FVNeverDotNetTemplateOwner' $owner
 ReplaceString 'FVNeverDotNetTemplate' $projectName
-ReplaceString 'FVNeverDotNetTemplateDescription' $description
+ReplaceString 'ForNeVeR/dotnet-repo-template' "$owner/$repository"
 
 ReplaceString "<File Path=`".github\README.md`" />" ''
 ReplaceString "<File Path=`"scripts/Initiate.ps1`" />" ''
