@@ -25,7 +25,6 @@ The license indication in the project's sources is compliant with the [REUSE spe
 [status-zero]: https://img.shields.io/badge/status-zero-lightgrey.svg
 [nuget.badge]: https://img.shields.io/nuget/v/FVNeverDotNetTemplate
 [nuget]: https://www.nuget.org/packages/FVNeverDotNetTemplate
-[reuse]: https://reuse.software/
 [docs]: https://FVNeverDotNetTemplateOwner.github.io/FVNeverDotNetTemplate
 [docs.changelog]: CHANGELOG.md
 [docs.contributing]: CONTRIBUTING.md
